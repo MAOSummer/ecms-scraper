@@ -22,7 +22,7 @@ st.caption(f"Note: The latest data available is through {default_end}.")
 st.subheader("Step 2: Select Data Source(s)")
 source_options = {
     "Executed Legal Agreements": "Standard agreement documents",
-    "Executed Legal Supplements": "⚠️ Recommended max 2-year range (longer runtime)",
+    "Executed Legal Supplements": "⚠️ Recommended max 2-year range",
     "Executed Legal Work Orders": "Work orders tied to agreements",
     "Executed Legal Work Order Amendments": "Amendments to prior work orders"
 }
@@ -35,11 +35,15 @@ selected_sources = st.multiselect(
 # --- Runtime estimates ---
 st.subheader("Estimated Runtime by Source")
 st.markdown("""
-- **Executed Legal Agreements**: ~1 hour
-- **Executed Legal Supplements**: ~3–4 hours (⚠️ longer if >2 years)
-- **Executed Legal Work Orders**: ~1.5 hours
-- **Work Order Amendments**: ~40 minutes
+These are estimated runtimes based on a 3-year data span (e.g., 2023–2025).  
+Actual runtime may vary depending on year selection and data volume.
+
+- **Executed Legal Agreements**: ~1 hour  
+- **Executed Legal Supplements**: ~3–4 hours (longer if >2 years recommended max)  
+- **Executed Legal Work Orders**: ~1.5 hours  
+- **Work Order Amendments**: ~40 minutes  
 """)
+
 
 # --- Run button ---
 if st.button("Run Scraper"):
