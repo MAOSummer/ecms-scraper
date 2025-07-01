@@ -1,0 +1,9 @@
+[server]
+headless = true
+
+[theme]
+primaryColor = "#4a90e2"
+base = "light"
+
+[ui]
+pageTitle = "PennDOT ECMS Scraper"
